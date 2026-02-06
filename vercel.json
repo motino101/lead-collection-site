@@ -1,0 +1,11 @@
+{
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "installCommand": "",
+  "rewrites": [
+    { "source": "/animated-titles", "destination": "/animated-titles.html" },
+    { "source": "/design-system", "destination": "/design-system.html" },
+    { "source": "/design-trends", "destination": "/design-trends.html" }
+  ]
+}

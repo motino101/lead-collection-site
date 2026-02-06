@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System | Cole Lee</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Adobe Fonts - Roca -->
+  <link rel="stylesheet" href="https://use.typekit.net/dwh5keb.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="design-system.css">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'osaka';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <!-- Back navigation -->
+  <nav class="nav">
+    <a href="/" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+      <span>Back</span>
+    </a>
+    <span class="nav-title">Design System</span>
+    <div class="social-icons">
+      <a href="https://x.com/covacut" target="_blank" class="social-icon" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/covacut/" target="_blank" class="social-icon" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@covacut" target="_blank" class="social-icon" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/cole-lee-0564ab70/" target="_blank" class="social-icon" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <!-- Header -->
+    <header class="header">
+      <span class="label">Style Exploration</span>
+      <h1>Retro Bauhaus × Asia</h1>
+      <p>Four distinct design directions merging Bauhaus geometry with Asian aesthetics</p>
+    </header>
+
+    <!-- Style Options Grid -->
+    <div class="styles-grid">
+
+      <!-- Option 1: Tokyo Geometric -->
+      <article class="style-card style-tokyo" data-theme-select="tokyo">
+        <div class="style-preview">
+          <div class="preview-shapes">
+            <div class="shape circle"></div>
+            <div class="shape square"></div>
+            <div class="shape triangle"></div>
+            <div class="shape line-h"></div>
+            <div class="shape line-v"></div>
+          </div>
+          <div class="preview-typography">
+            <span class="preview-heading">Aa</span>
+            <span class="preview-body">見出し</span>
+          </div>
+        </div>
+        <div class="style-info">
+          <span class="style-number">01</span>
+          <h2>Tokyo Geometric</h2>
+          <p>Japanese minimalism meets Bauhaus precision. Monochromatic base with vermillion accents, inspired by traditional ink paintings and modern Tokyo signage.</p>
+          <div class="color-palette">
+            <span class="color" style="background: #0D0D0D" title="Sumi Black"></span>
+            <span class="color" style="background: #F5F5F0" title="Washi White"></span>
+            <span class="color" style="background: #D64045" title="Vermillion"></span>
+            <span class="color" style="background: #2B4162" title="Indigo"></span>
+            <span class="color" style="background: #C9B037" title="Gold Leaf"></span>
+          </div>
+          <div class="style-tags">
+            <span class="tag">Minimal</span>
+            <span class="tag">High Contrast</span>
+            <span class="tag">Zen</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Option 2: Shanghai Deco -->
+      <article class="style-card style-shanghai" data-theme-select="shanghai">
+        <div class="style-preview">
+          <div class="preview-shapes">
+            <div class="shape circle"></div>
+            <div class="shape square"></div>
+            <div class="shape triangle"></div>
+            <div class="shape arc"></div>
+            <div class="shape dots"></div>
+          </div>
+          <div class="preview-typography">
+            <span class="preview-heading">Aa</span>
+            <span class="preview-body">上海</span>
+          </div>
+        </div>
+        <div class="style-info">
+          <span class="style-number">02</span>
+          <h2>Shanghai Deco</h2>
+          <p>1930s Shanghai Art Deco revival. Rich jewel tones, ornate geometric patterns, and the glamour of the Paris of the East meeting Bauhaus rationalism.</p>
+          <div class="color-palette">
+            <span class="color" style="background: #1A1A2E" title="Midnight"></span>
+            <span class="color" style="background: #E8D5B7" title="Champagne"></span>
+            <span class="color" style="background: #B8860B" title="Antique Gold"></span>
+            <span class="color" style="background: #722F37" title="Wine Red"></span>
+            <span class="color" style="background: #0F4C5C" title="Teal"></span>
+          </div>
+          <div class="style-tags">
+            <span class="tag">Luxurious</span>
+            <span class="tag">Ornate</span>
+            <span class="tag">Glamour</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Option 3: Seoul Pop -->
+      <article class="style-card style-seoul" data-theme-select="seoul">
+        <div class="style-preview">
+          <div class="preview-shapes">
+            <div class="shape circle"></div>
+            <div class="shape square"></div>
+            <div class="shape half-circle"></div>
+            <div class="shape cross"></div>
+            <div class="shape wave"></div>
+          </div>
+          <div class="preview-typography">
+            <span class="preview-heading">Aa</span>
+            <span class="preview-body">서울</span>
+          </div>
+        </div>
+        <div class="style-info">
+          <span class="style-number">03</span>
+          <h2>Seoul Pop</h2>
+          <p>Contemporary Korean design meets retro-futurism. Soft pastels with electric accents, playful geometry inspired by Hangul letterforms and K-culture energy.</p>
+          <div class="color-palette">
+            <span class="color" style="background: #FAF3E8" title="Cream"></span>
+            <span class="color" style="background: #FF6B9D" title="Hot Pink"></span>
+            <span class="color" style="background: #4ECDC4" title="Mint"></span>
+            <span class="color" style="background: #FFE66D" title="Lemon"></span>
+            <span class="color" style="background: #2C2C54" title="Deep Navy"></span>
+          </div>
+          <div class="style-tags">
+            <span class="tag">Playful</span>
+            <span class="tag">Fresh</span>
+            <span class="tag">Energetic</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Option 4: Hanoi Heritage -->
+      <article class="style-card style-hanoi" data-theme-select="hanoi">
+        <div class="style-preview">
+          <div class="preview-shapes">
+            <div class="shape circle"></div>
+            <div class="shape diamond"></div>
+            <div class="shape stairs"></div>
+            <div class="shape zigzag"></div>
+            <div class="shape dot-grid"></div>
+          </div>
+          <div class="preview-typography">
+            <span class="preview-heading">Aa</span>
+            <span class="preview-body">Hà Nội</span>
+          </div>
+        </div>
+        <div class="style-info">
+          <span class="style-number">04</span>
+          <h2>Hanoi Heritage</h2>
+          <p>Southeast Asian warmth with French-colonial Bauhaus influence. Terracotta and jade tones, organic geometry inspired by lacquerware and tropical modernism.</p>
+          <div class="color-palette">
+            <span class="color" style="background: #2D3A3A" title="Deep Forest"></span>
+            <span class="color" style="background: #F4ECD8" title="Rice Paper"></span>
+            <span class="color" style="background: #C65D3B" title="Terracotta"></span>
+            <span class="color" style="background: #3D7C6B" title="Jade"></span>
+            <span class="color" style="background: #DAA520" title="Turmeric"></span>
+          </div>
+          <div class="style-tags">
+            <span class="tag">Warm</span>
+            <span class="tag">Organic</span>
+            <span class="tag">Tropical</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Light Themes Section -->
+    <header class="header" style="margin-top: 80px;">
+      <span class="label">Light Mode</span>
+      <h1>Light Themes</h1>
+      <p>Bright, airy alternatives for daytime browsing</p>
+    </header>
+
+    <div class="styles-grid">
+
+      <!-- Light Theme 1: Kyoto Morning -->
+      <article class="style-card style-kyoto" data-theme-select="kyoto">
+        <div class="style-preview" style="background: #FAF8F5;">
+          <div class="preview-shapes">
+            <div class="shape circle" style="background: #C45B4D;"></div>
+            <div class="shape square" style="background: #5B8A72;"></div>
+            <div class="shape triangle" style="border-bottom-color: #D4A853;"></div>
+          </div>
+          <div class="preview-typography" style="color: #2C2825;">
+            <span class="preview-heading">Aa</span>
+            <span class="preview-body">京都</span>
+          </div>
+        </div>
+        <div class="style-info">
+          <span class="style-number">05</span>
+          <h2>Kyoto Morning</h2>
+          <p>Zen tranquility meets warm earth tones. Inspired by temple gardens and morning mist over ancient stones.</p>
+          <div class="color-palette">
+            <span class="color" style="background: #FAF8F5" title="Rice Paper"></span>
+            <span class="color" style="background: #2C2825" title="Ink Stone"></span>
+            <span class="color" style="background: #C45B4D" title="Persimmon"></span>
+            <span class="color" style="background: #5B8A72" title="Bamboo"></span>
+            <span class="color" style="background: #D4A853" title="Gold Leaf"></span>
+          </div>
+          <div class="style-tags">
+            <span class="tag">Light</span>
+            <span class="tag">Warm</span>
+            <span class="tag">Zen</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Light Theme 2: Busan Coastal -->
+      <article class="style-card style-busan" data-theme-select="busan">
+        <div class="style-preview" style="background: #F5F9FC;">
+          <div class="preview-shapes">
+            <div class="shape circle" style="background: #2D7DD2;"></div>
+            <div class="shape square" style="background: #45B7A0;"></div>
+            <div class="shape triangle" style="border-bottom-color: #F5A623;"></div>
+          </div>
+          <div class="preview-typography" style="color: #1A2B3C;">
+            <span class="preview-heading">Aa</span>
+            <span class="preview-body">부산</span>
+          </div>
+        </div>
+        <div class="style-info">
+          <span class="style-number">06</span>
+          <h2>Busan Coastal</h2>
+          <p>Ocean blues and sandy warmth. Clean, bright, and refreshing like a sea breeze on the Korean coast.</p>
+          <div class="color-palette">
+            <span class="color" style="background: #F5F9FC" title="Sea Foam"></span>
+            <span class="color" style="background: #1A2B3C" title="Deep Sea"></span>
+            <span class="color" style="background: #2D7DD2" title="Ocean"></span>
+            <span class="color" style="background: #45B7A0" title="Teal"></span>
+            <span class="color" style="background: #F5A623" title="Sunset"></span>
+          </div>
+          <div class="style-tags">
+            <span class="tag">Light</span>
+            <span class="tag">Fresh</span>
+            <span class="tag">Coastal</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Light Theme 3: Osaka Sakura -->
+      <article class="style-card style-osaka" data-theme-select="osaka">
+        <div class="style-preview" style="background: #FDF8F8;">
+          <div class="preview-shapes">
+            <div class="shape circle" style="background: #D4728C;"></div>
+            <div class="shape square" style="background: #8B6B8A;"></div>
+            <div class="shape triangle" style="border-bottom-color: #E8B4A0;"></div>
+          </div>
+          <div class="preview-typography" style="color: #3A2B32;">
+            <span class="preview-heading">Aa</span>
+            <span class="preview-body">大阪</span>
+          </div>
+        </div>
+        <div class="style-info">
+          <span class="style-number">07</span>
+          <h2>Osaka Sakura</h2>
+          <p>Soft cherry blossom pinks and dusty lavenders. Romantic and gentle like spring in the city of commerce.</p>
+          <div class="color-palette">
+            <span class="color" style="background: #FDF8F8" title="Petal White"></span>
+            <span class="color" style="background: #3A2B32" title="Bark"></span>
+            <span class="color" style="background: #D4728C" title="Sakura"></span>
+            <span class="color" style="background: #8B6B8A" title="Wisteria"></span>
+            <span class="color" style="background: #E8B4A0" title="Peach"></span>
+          </div>
+          <div class="style-tags">
+            <span class="tag">Light</span>
+            <span class="tag">Soft</span>
+            <span class="tag">Romantic</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Light Theme 4: Singapore Garden -->
+      <article class="style-card style-singapore" data-theme-select="singapore">
+        <div class="style-preview" style="background: #F6FAF6;">
+          <div class="preview-shapes">
+            <div class="shape circle" style="background: #2D8B5A;"></div>
+            <div class="shape square" style="background: #5C8A6C;"></div>
+            <div class="shape triangle" style="border-bottom-color: #D4A853;"></div>
+          </div>
+          <div class="preview-typography" style="color: #1C2B22;">
+            <span class="preview-heading">Aa</span>
+            <span class="preview-body">新加坡</span>
+          </div>
+        </div>
+        <div class="style-info">
+          <span class="style-number">08</span>
+          <h2>Singapore Garden</h2>
+          <p>Lush tropical greens and botanical freshness. Inspired by the city in a garden, verdant and alive.</p>
+          <div class="color-palette">
+            <span class="color" style="background: #F6FAF6" title="Morning Dew"></span>
+            <span class="color" style="background: #1C2B22" title="Forest Floor"></span>
+            <span class="color" style="background: #2D8B5A" title="Emerald"></span>
+            <span class="color" style="background: #5C8A6C" title="Sage"></span>
+            <span class="color" style="background: #D4A853" title="Orchid Gold"></span>
+          </div>
+          <div class="style-tags">
+            <span class="tag">Light</span>
+            <span class="tag">Botanical</span>
+            <span class="tag">Fresh</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Design Elements Section -->
+    <section class="elements-section">
+      <h2>Shared Design Principles</h2>
+      <div class="principles-grid">
+        <div class="principle">
+          <div class="principle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <rect x="8" y="8" width="8" height="8"/>
+            </svg>
+          </div>
+          <h3>Primary Shapes</h3>
+          <p>Circle, square, triangle — the Bauhaus fundamentals, reinterpreted through regional lens</p>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="4" y1="6" x2="20" y2="6"/>
+              <line x1="4" y1="12" x2="20" y2="12"/>
+              <line x1="4" y1="18" x2="14" y2="18"/>
+            </svg>
+          </div>
+          <h3>Grid Systems</h3>
+          <p>Strict underlying structure allowing creative freedom within constraints</p>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Layered Depth</h3>
+          <p>Overlapping elements create visual hierarchy and spatial intrigue</p>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2v4m0 12v4M2 12h4m12 0h4"/>
+            </svg>
+          </div>
+          <h3>Bold Contrast</h3>
+          <p>High-impact color pairings that command attention and guide the eye</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography Controls -->
+    <section class="typography-section">
+      <h2>Typography</h2>
+      <p class="section-desc">Click any font to apply it across the entire site</p>
+      
+      <div class="controls-grid">
+        <!-- Title Font Selection -->
+        <div class="control-group">
+          <span class="control-label">Title Font</span>
+          <div class="font-options" data-control="title-font">
+            <button class="font-option" data-font="roca" data-font-stack="'roca', 'Space Grotesk', system-ui, sans-serif">
+              <span class="font-preview" style="font-family: 'roca', sans-serif;">Aa</span>
+              <span class="font-name">Roca</span>
+            </button>
+            <button class="font-option" data-font="space-grotesk" data-font-stack="'Space Grotesk', system-ui, sans-serif">
+              <span class="font-preview" style="font-family: 'Space Grotesk', sans-serif;">Aa</span>
+              <span class="font-name">Space Grotesk</span>
+            </button>
+            <button class="font-option" data-font="inter" data-font-stack="'Inter', system-ui, sans-serif">
+              <span class="font-preview" style="font-family: 'Inter', system-ui, sans-serif;">Aa</span>
+              <span class="font-name">Inter</span>
+            </button>
+            <button class="font-option" data-font="system" data-font-stack="system-ui, -apple-system, sans-serif">
+              <span class="font-preview" style="font-family: system-ui, sans-serif;">Aa</span>
+              <span class="font-name">System</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Body Font Selection -->
+        <div class="control-group">
+          <span class="control-label">Body / Mono Font</span>
+          <div class="font-options" data-control="body-font">
+            <button class="font-option" data-font="jetbrains" data-font-stack="'JetBrains Mono', 'SF Mono', monospace">
+              <span class="font-preview" style="font-family: 'JetBrains Mono', monospace;">Aa</span>
+              <span class="font-name">JetBrains Mono</span>
+            </button>
+            <button class="font-option" data-font="fira" data-font-stack="'Fira Code', monospace">
+              <span class="font-preview" style="font-family: 'Fira Code', monospace;">Aa</span>
+              <span class="font-name">Fira Code</span>
+            </button>
+            <button class="font-option" data-font="sf-mono" data-font-stack="'SF Mono', 'Monaco', monospace">
+              <span class="font-preview" style="font-family: 'SF Mono', monospace;">Aa</span>
+              <span class="font-name">SF Mono</span>
+            </button>
+            <button class="font-option" data-font="system-mono" data-font-stack="ui-monospace, monospace">
+              <span class="font-preview" style="font-family: ui-monospace, monospace;">Aa</span>
+              <span class="font-name">System Mono</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacing & Radius Controls -->
+    <section class="controls-section">
+      <h2>Spacing & Radius</h2>
+      <p class="section-desc">Adjust the visual density and roundness</p>
+      
+      <div class="controls-grid">
+        <!-- Spacing Scale -->
+        <div class="control-group">
+          <span class="control-label">Spacing Scale</span>
+          <div class="toggle-options" data-control="spacing">
+            <button class="toggle-option" data-value="compact">Compact</button>
+            <button class="toggle-option" data-value="default">Default</button>
+            <button class="toggle-option" data-value="relaxed">Relaxed</button>
+          </div>
+        </div>
+
+        <!-- Border Radius -->
+        <div class="control-group">
+          <span class="control-label">Border Radius</span>
+          <div class="toggle-options" data-control="radius">
+            <button class="toggle-option" data-value="sharp">Sharp</button>
+            <button class="toggle-option" data-value="default">Default</button>
+            <button class="toggle-option" data-value="rounded">Rounded</button>
+            <button class="toggle-option" data-value="pill">Pill</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animation Controls -->
+    <section class="controls-section">
+      <h2>Motion & Effects</h2>
+      <p class="section-desc">Control animations and visual effects</p>
+      
+      <div class="controls-grid">
+        <!-- Animation Speed -->
+        <div class="control-group">
+          <span class="control-label">Animation Speed</span>
+          <div class="toggle-options" data-control="animation-speed">
+            <button class="toggle-option" data-value="off">Off</button>
+            <button class="toggle-option" data-value="reduced">Reduced</button>
+            <button class="toggle-option" data-value="default">Default</button>
+            <button class="toggle-option" data-value="fast">Fast</button>
+          </div>
+        </div>
+
+        <!-- Blur Effects -->
+        <div class="control-group">
+          <span class="control-label">Blur Effects</span>
+          <div class="toggle-options" data-control="blur">
+            <button class="toggle-option" data-value="off">Off</button>
+            <button class="toggle-option" data-value="default">Default</button>
+            <button class="toggle-option" data-value="intense">Intense</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Preview -->
+    <section class="preview-section">
+      <h2>Live Preview</h2>
+      <div class="live-preview">
+        <h3 class="preview-title">The quick brown fox</h3>
+        <p class="preview-subtitle">jumps over the lazy dog</p>
+        <p class="preview-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="preview-buttons">
+          <button class="preview-btn primary">Primary Action</button>
+          <button class="preview-btn secondary">Secondary</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reset Button -->
+    <section class="reset-section">
+      <button class="reset-btn" id="reset-all">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        <span>Reset All to Defaults</span>
+      </button>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="theme.js"></script>
+  <script src="design-system.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* ========================================
+   Home Page Styles
+   Requires: tokens.css, base.css
+======================================== */
+
+/* ========================================
+   Custom Cursor
+======================================== */
+body {
+  cursor: none;
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  background: var(--color-text);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border-hover);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+}
+
+.cursor.hovering {
+  width: 16px;
+  height: 16px;
+}
+
+.cursor-follower.hovering {
+  width: 60px;
+  height: 60px;
+  border-color: var(--color-accent);
+}
+
+@media (hover: none) {
+  .cursor, .cursor-follower { display: none; }
+  body { cursor: auto; }
+}
+
+/* ========================================
+   Background Shapes
+======================================== */
+.bg-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+}
+
+.shape-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--shape-1) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+}
+
+.shape-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--shape-2) 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+}
+
+.shape-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--shape-3) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ========================================
+   Hero
+======================================== */
+.hero-content {
+  max-width: 720px;
+}
+
+.title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.title-line {
+  display: block;
+}
+
+.title-sub {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.5em;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 560px;
+}
+
+/* ========================================
+   Section Titles
+======================================== */
+.section-title {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+/* ========================================
+   Work List
+======================================== */
+.work-list {
+  list-style: none;
+}
+
+.work-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+}
+
+.bullet {
+  font-family: var(--font-body);
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+.work-text {
+  flex: 1;
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.work-text strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.inline-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.inline-link:hover strong {
+  color: var(--color-accent-hover);
+}
+
+.date {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+  white-space: nowrap;
+}
+
+/* ========================================
+   Links Section
+======================================== */
+.link-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.link-group.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.link {
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: var(--space-xs) 0;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-normal);
+}
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+/* ========================================
+   Footer Line
+======================================== */
+.footer-line {
+  width: 60px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  margin: var(--space-3xl) auto 0;
+}
+
+/* ========================================
+   Responsive
+======================================== */
+@media (max-width: 640px) {
+  .work-item {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  
+  .date {
+    width: 100%;
+    padding-left: var(--space-lg);
+  }
+}

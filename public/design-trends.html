@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Trends 2025 | Cole Lee</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Adobe Fonts - Roca -->
+  <link rel="stylesheet" href="https://use.typekit.net/dwh5keb.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'osaka';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <style>
+    /* Page-specific styles */
+    .header {
+      text-align: center;
+      margin-bottom: var(--space-4xl);
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-text-dim);
+      font-size: 0.9rem;
+    }
+
+    .meta-item svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+    }
+
+    /* Key Insight */
+    .insight {
+      text-align: center;
+      padding: var(--space-3xl);
+      background: var(--gradient-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--space-4xl);
+    }
+
+    .insight-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-text-dim);
+      margin-bottom: var(--space-md);
+    }
+
+    .insight-text {
+      font-family: var(--font-title);
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--color-text);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Trends Grid */
+    .trends-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+    }
+
+    .trend-card {
+      position: relative;
+      padding: var(--space-2xl);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      transition: all 0.4s var(--ease-out-expo);
+      overflow: hidden;
+    }
+
+    .trend-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, var(--color-accent-glow), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .trend-card:hover {
+      background: var(--color-surface-hover);
+      border-color: var(--color-border-hover);
+      transform: translateY(-4px);
+    }
+
+    .trend-card:hover::before {
+      opacity: 1;
+    }
+
+    .trend-number {
+      position: absolute;
+      top: var(--space-xl);
+      right: var(--space-2xl);
+      font-family: var(--font-title);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--color-border);
+      line-height: 1;
+      transition: color 0.4s ease;
+    }
+
+    .trend-card:hover .trend-number {
+      color: var(--color-border-hover);
+    }
+
+    .trend-header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .trend-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-surface-hover);
+      border-radius: var(--radius-md);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .trend-name {
+      font-family: var(--font-title);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-text);
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    .trend-description {
+      color: var(--color-text-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .trend-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--color-surface-hover);
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+    }
+
+    .stat-value {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    .stat-label {
+      color: var(--color-text-dim);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .trend-card {
+        padding: var(--space-xl);
+      }
+
+      .trend-number {
+        font-size: 3rem;
+        top: var(--space-lg);
+        right: var(--space-lg);
+      }
+
+      .trend-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+      }
+
+      .trend-name {
+        font-size: 1.25rem;
+      }
+
+      .meta {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-sm);
+      }
+
+      .insight {
+        padding: var(--space-xl);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="/" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+      <span>Back</span>
+    </a>
+    <span class="nav-title">Design Trends</span>
+  </nav>
+
+  <main class="main main--narrow">
+    <!-- Header -->
+    <header class="header animate-in">
+      <span class="label">Trend Report</span>
+      <h1>Design Trends <span style="color: var(--color-accent)">2025</span></h1>
+      <p>Where nostalgic, handcrafted design meets the precision of new technology. Embracing AI's endless possibilities while craving the quirks and creativity that only come from a human touch.</p>
+      <div class="meta">
+        <span class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          7 Trends
+        </span>
+        <span class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Based on 1B+ designs
+        </span>
+      </div>
+    </header>
+
+    <!-- Key Insight -->
+    <div class="insight animate-in animate-in--delay-1">
+      <p class="insight-label">Key Insight</p>
+      <p class="insight-text">"People are embracing the endless possibilities of AI while also craving the quirks, nostalgia, and creativity that only come from a human touch."</p>
+    </div>
+
+    <!-- Section Title -->
+    <h2 class="animate-in animate-in--delay-2">The Seven Trends</h2>
+
+    <!-- Trends Grid -->
+    <div class="trends-grid">
+      <!-- Trend 1 -->
+      <article class="trend-card animate-in animate-in--delay-3">
+        <span class="trend-number">01</span>
+        <div class="trend-header">
+          <div class="trend-icon">&#127912;</div>
+          <h3 class="trend-name">Analog Meets AI</h3>
+        </div>
+        <p class="trend-description">This trend embodies a blend where timeless techniques like collage and human craftsmanship meet the boundless potential of artificial intelligence. Expect scrapbook aesthetics, handmade textures, and organic imperfections enhanced by AI capabilities.</p>
+        <div class="trend-stats">
+          <span class="stat-item">
+            <span class="stat-value">+92%</span>
+            <span class="stat-label">"scrapbook" searches</span>
+          </span>
+        </div>
+      </article>
+
+      <!-- Trend 2 -->
+      <article class="trend-card animate-in animate-in--delay-4">
+        <span class="trend-number">02</span>
+        <div class="trend-header">
+          <div class="trend-icon">&#11042;</div>
+          <h3 class="trend-name">Shape Theory</h3>
+        </div>
+        <p class="trend-description">A fresh twist on design that balances nostalgia with innovation. This modular style uses bold geometric shapes to create structure, complemented by back-lit photography and warm color palettes for a personal, inviting touch.</p>
+        <div class="trend-stats">
+          <span class="stat-item">
+            <span class="stat-value">Modular</span>
+            <span class="stat-label">design system</span>
+          </span>
+          <span class="stat-item">
+            <span class="stat-value">Warm</span>
+            <span class="stat-label">color palettes</span>
+          </span>
+        </div>
+      </article>
+
+      <!-- Trend 3 -->
+      <article class="trend-card animate-in animate-in--delay-5">
+        <span class="trend-number">03</span>
+        <div class="trend-header">
+          <div class="trend-icon">&#9999;&#65039;</div>
+          <h3 class="trend-name">Refined Grit</h3>
+        </div>
+        <p class="trend-description">Go experimental and edgy with Refined Grit. This trend celebrates handwriting, scribble elements, and raw textures that bring authenticity and edge to designs. It's polished enough to feel professional but raw enough to feel real.</p>
+        <div class="trend-stats">
+          <span class="stat-item">
+            <span class="stat-value">Handwritten</span>
+            <span class="stat-label">typography</span>
+          </span>
+          <span class="stat-item">
+            <span class="stat-value">Raw</span>
+            <span class="stat-label">textures</span>
+          </span>
+        </div>
+      </article>
+
+      <!-- Trend 4 -->
+      <article class="trend-card">
+        <span class="trend-number">04</span>
+        <div class="trend-header">
+          <div class="trend-icon">&#128142;</div>
+          <h3 class="trend-name">Opulence Era</h3>
+        </div>
+        <p class="trend-description">A return to stripped-back, clean design without the soullessness of monochromatic minimalism. Defined by rich textures, jewel tone palettes, and intricate patterns that bring a sense of luxury and sophistication to your designs.</p>
+        <div class="trend-stats">
+          <span class="stat-item">
+            <span class="stat-value">Jewel</span>
+            <span class="stat-label">tone palettes</span>
+          </span>
+          <span class="stat-item">
+            <span class="stat-value">Rich</span>
+            <span class="stat-label">textures</span>
+          </span>
+        </div>
+      </article>
+
+      <!-- Trend 5 -->
+      <article class="trend-card">
+        <span class="trend-number">05</span>
+        <div class="trend-header">
+          <div class="trend-icon">&#127914;</div>
+          <h3 class="trend-name">Serious Fun</h3>
+        </div>
+        <p class="trend-description">Colorful, playful, and nostalgic graphics that don't take themselves too seriously. This trend embraces humor, whimsy, and joy in design while still maintaining professional polish. Perfect for brands wanting to connect on a human level.</p>
+        <div class="trend-stats">
+          <span class="stat-item">
+            <span class="stat-value">+92%</span>
+            <span class="stat-label">"silly" searches</span>
+          </span>
+          <span class="stat-item">
+            <span class="stat-value">+36%</span>
+            <span class="stat-label">"funny" searches</span>
+          </span>
+          <span class="stat-item">
+            <span class="stat-value">+27%</span>
+            <span class="stat-label">"humor" searches</span>
+          </span>
+        </div>
+      </article>
+
+      <!-- Trend 6 -->
+      <article class="trend-card">
+        <span class="trend-number">06</span>
+        <div class="trend-header">
+          <div class="trend-icon">&#127754;</div>
+          <h3 class="trend-name">Future in Motion</h3>
+        </div>
+        <p class="trend-description">The trend with the biggest year-over-year growth. From subtle motion gradients to advanced motion typography and animated graphics, movement is becoming essential to modern design. Static is out; dynamic is in.</p>
+        <div class="trend-stats">
+          <span class="stat-item">
+            <span class="stat-value">+109%</span>
+            <span class="stat-label">"motion" searches</span>
+          </span>
+          <span class="stat-item">
+            <span class="stat-value">+78%</span>
+            <span class="stat-label">"animation" searches</span>
+          </span>
+        </div>
+      </article>
+
+      <!-- Trend 7 -->
+      <article class="trend-card">
+        <span class="trend-number">07</span>
+        <div class="trend-header">
+          <div class="trend-icon">&#127807;</div>
+          <h3 class="trend-name">Mechanical Botanical</h3>
+        </div>
+        <p class="trend-description">A contrasting blend of soft organic imagery and futuristic design where nature meets technology. This trend combines natural textures and earth tones with sleek digital design elements, creating harmony between the organic and synthetic.</p>
+        <div class="trend-stats">
+          <span class="stat-item">
+            <span class="stat-value">+71%</span>
+            <span class="stat-label">"cutting-edge" searches</span>
+          </span>
+          <span class="stat-item">
+            <span class="stat-value">+32%</span>
+            <span class="stat-label">"cyber" searches</span>
+          </span>
+        </div>
+      </article>
+    </div>
+
+    <div class="divider"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="theme.js"></script>
+  <script>
+    // GSAP scroll animations for trend cards
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate trend cards on scroll
+    gsap.utils.toArray('.trend-card:not(.animate-in)').forEach((card, i) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* ========================================
+   Design Tokens - Central Design System
+   Selected theme: Osaka Sakura
+======================================== */
+
+:root {
+  /* ====== Typography ====== */
+  --font-title: 'roca', 'Space Grotesk', 'SF Pro Rounded', system-ui, sans-serif;
+  --font-body: 'Inter', 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  
+  /* ====== Spacing Scale ====== */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+  
+  /* ====== Border Radius ====== */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 100px;
+  
+  /* ====== Transitions ====== */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 0.15s var(--ease-out-expo);
+  --transition-normal: 0.3s var(--ease-out-expo);
+  --transition-slow: 0.5s var(--ease-out-expo);
+  
+  /* ====== Shadows ====== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 40px var(--color-accent-glow);
+}
+
+/* ========================================
+   Theme: Seoul Pop (Default)
+======================================== */
+:root,
+[data-theme="seoul"] {
+  /* Core Colors */
+  --color-bg: #0D0B1A;
+  --color-bg-secondary: #161328;
+  --color-bg-tertiary: #1E1A32;
+  
+  /* Text Colors */
+  --color-text: #FAF3E8;
+  --color-text-muted: #A8A3B8;
+  --color-text-dim: #6B6580;
+  
+  /* Accent Colors */
+  --color-primary: #FF6B9D;
+  --color-secondary: #4ECDC4;
+  --color-tertiary: #FFE66D;
+  --color-accent: #FF6B9D;
+  --color-accent-hover: #FF85AD;
+  --color-accent-glow: rgba(255, 107, 157, 0.3);
+  
+  /* UI Colors */
+  --color-border: rgba(255, 107, 157, 0.15);
+  --color-border-hover: rgba(255, 107, 157, 0.3);
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-hover: rgba(255, 255, 255, 0.06);
+  
+  /* Gradient */
+  --gradient-bg: linear-gradient(
+    135deg,
+    rgba(255, 107, 157, 0.12) 0%,
+    rgba(78, 205, 196, 0.08) 50%,
+    rgba(255, 230, 109, 0.06) 100%
+  );
+  
+  /* Shape Colors (for floating elements) */
+  --shape-1: rgba(255, 107, 157, 0.2);
+  --shape-2: rgba(78, 205, 196, 0.18);
+  --shape-3: rgba(255, 230, 109, 0.15);
+}
+
+/* ========================================
+   Theme: Tokyo Geometric
+======================================== */
+[data-theme="tokyo"] {
+  /* Core Colors */
+  --color-bg: #0D0D0D;
+  --color-bg-secondary: #1A1A1A;
+  --color-bg-tertiary: #242424;
+  
+  /* Text Colors */
+  --color-text: #F5F5F0;
+  --color-text-muted: #9A9A95;
+  --color-text-dim: #5A5A58;
+  
+  /* Accent Colors */
+  --color-primary: #D64045;
+  --color-secondary: #2B4162;
+  --color-tertiary: #C9B037;
+  --color-accent: #D64045;
+  --color-accent-hover: #E05055;
+  --color-accent-glow: rgba(214, 64, 69, 0.3);
+  
+  /* UI Colors */
+  --color-border: rgba(214, 64, 69, 0.15);
+  --color-border-hover: rgba(214, 64, 69, 0.3);
+  --color-surface: rgba(255, 255, 255, 0.02);
+  --color-surface-hover: rgba(255, 255, 255, 0.05);
+  
+  /* Gradient */
+  --gradient-bg: linear-gradient(
+    135deg,
+    rgba(214, 64, 69, 0.1) 0%,
+    rgba(43, 65, 98, 0.08) 50%,
+    rgba(201, 176, 55, 0.06) 100%
+  );
+  
+  /* Shape Colors */
+  --shape-1: rgba(214, 64, 69, 0.2);
+  --shape-2: rgba(43, 65, 98, 0.25);
+  --shape-3: rgba(201, 176, 55, 0.15);
+}
+
+/* ========================================
+   Theme: Shanghai Deco
+======================================== */
+[data-theme="shanghai"] {
+  /* Core Colors */
+  --color-bg: #1A1A2E;
+  --color-bg-secondary: #16213E;
+  --color-bg-tertiary: #1F2B4A;
+  
+  /* Text Colors */
+  --color-text: #E8D5B7;
+  --color-text-muted: #A89880;
+  --color-text-dim: #6B6055;
+  
+  /* Accent Colors */
+  --color-primary: #B8860B;
+  --color-secondary: #722F37;
+  --color-tertiary: #0F4C5C;
+  --color-accent: #B8860B;
+  --color-accent-hover: #DAA520;
+  --color-accent-glow: rgba(184, 134, 11, 0.3);
+  
+  /* UI Colors */
+  --color-border: rgba(184, 134, 11, 0.2);
+  --color-border-hover: rgba(184, 134, 11, 0.4);
+  --color-surface: rgba(232, 213, 183, 0.03);
+  --color-surface-hover: rgba(232, 213, 183, 0.06);
+  
+  /* Gradient */
+  --gradient-bg: linear-gradient(
+    135deg,
+    rgba(184, 134, 11, 0.12) 0%,
+    rgba(114, 47, 55, 0.08) 50%,
+    rgba(15, 76, 92, 0.1) 100%
+  );
+  
+  /* Shape Colors */
+  --shape-1: rgba(184, 134, 11, 0.25);
+  --shape-2: rgba(114, 47, 55, 0.2);
+  --shape-3: rgba(15, 76, 92, 0.2);
+}
+
+/* ========================================
+   Theme: Hanoi Heritage
+======================================== */
+[data-theme="hanoi"] {
+  /* Core Colors */
+  --color-bg: #1E2422;
+  --color-bg-secondary: #2D3A3A;
+  --color-bg-tertiary: #3D4A4A;
+  
+  /* Text Colors */
+  --color-text: #F4ECD8;
+  --color-text-muted: #B8B0A0;
+  --color-text-dim: #7A7568;
+  
+  /* Accent Colors */
+  --color-primary: #C65D3B;
+  --color-secondary: #3D7C6B;
+  --color-tertiary: #DAA520;
+  --color-accent: #C65D3B;
+  --color-accent-hover: #D66D4B;
+  --color-accent-glow: rgba(198, 93, 59, 0.3);
+  
+  /* UI Colors */
+  --color-border: rgba(198, 93, 59, 0.15);
+  --color-border-hover: rgba(198, 93, 59, 0.3);
+  --color-surface: rgba(244, 236, 216, 0.03);
+  --color-surface-hover: rgba(244, 236, 216, 0.06);
+  
+  /* Gradient */
+  --gradient-bg: linear-gradient(
+    135deg,
+    rgba(198, 93, 59, 0.1) 0%,
+    rgba(61, 124, 107, 0.1) 50%,
+    rgba(218, 165, 32, 0.08) 100%
+  );
+  
+  /* Shape Colors */
+  --shape-1: rgba(61, 124, 107, 0.25);
+  --shape-2: rgba(198, 93, 59, 0.2);
+  --shape-3: rgba(218, 165, 32, 0.18);
+}
+
+/* ========================================
+   LIGHT THEMES
+======================================== */
+
+/* ========================================
+   Theme: Kyoto Morning (Light)
+======================================== */
+[data-theme="kyoto"] {
+  /* Core Colors */
+  --color-bg: #FAF8F5;
+  --color-bg-secondary: #F0EDE8;
+  --color-bg-tertiary: #E8E4DC;
+  
+  /* Text Colors */
+  --color-text: #2C2825;
+  --color-text-muted: #6B635A;
+  --color-text-dim: #9A948C;
+  
+  /* Accent Colors */
+  --color-primary: #C45B4D;
+  --color-secondary: #5B8A72;
+  --color-tertiary: #D4A853;
+  --color-accent: #C45B4D;
+  --color-accent-hover: #A84A3E;
+  --color-accent-glow: rgba(196, 91, 77, 0.2);
+  
+  /* UI Colors */
+  --color-border: rgba(44, 40, 37, 0.1);
+  --color-border-hover: rgba(44, 40, 37, 0.2);
+  --color-surface: rgba(44, 40, 37, 0.03);
+  --color-surface-hover: rgba(44, 40, 37, 0.06);
+  
+  /* Gradient */
+  --gradient-bg: linear-gradient(
+    135deg,
+    rgba(196, 91, 77, 0.08) 0%,
+    rgba(91, 138, 114, 0.06) 50%,
+    rgba(212, 168, 83, 0.05) 100%
+  );
+  
+  /* Shape Colors */
+  --shape-1: rgba(196, 91, 77, 0.15);
+  --shape-2: rgba(91, 138, 114, 0.12);
+  --shape-3: rgba(212, 168, 83, 0.1);
+}
+
+/* ========================================
+   Theme: Busan Coastal (Light)
+======================================== */
+[data-theme="busan"] {
+  /* Core Colors */
+  --color-bg: #F5F9FC;
+  --color-bg-secondary: #E8F1F8;
+  --color-bg-tertiary: #DCE8F2;
+  
+  /* Text Colors */
+  --color-text: #1A2B3C;
+  --color-text-muted: #4A6178;
+  --color-text-dim: #8A9BAA;
+  
+  /* Accent Colors */
+  --color-primary: #2D7DD2;
+  --color-secondary: #45B7A0;
+  --color-tertiary: #F5A623;
+  --color-accent: #2D7DD2;
+  --color-accent-hover: #1E6BC2;
+  --color-accent-glow: rgba(45, 125, 210, 0.2);
+  
+  /* UI Colors */
+  --color-border: rgba(26, 43, 60, 0.08);
+  --color-border-hover: rgba(26, 43, 60, 0.15);
+  --color-surface: rgba(26, 43, 60, 0.02);
+  --color-surface-hover: rgba(26, 43, 60, 0.05);
+  
+  /* Gradient */
+  --gradient-bg: linear-gradient(
+    135deg,
+    rgba(45, 125, 210, 0.08) 0%,
+    rgba(69, 183, 160, 0.06) 50%,
+    rgba(245, 166, 35, 0.05) 100%
+  );
+  
+  /* Shape Colors */
+  --shape-1: rgba(45, 125, 210, 0.12);
+  --shape-2: rgba(69, 183, 160, 0.1);
+  --shape-3: rgba(245, 166, 35, 0.1);
+}
+
+/* ========================================
+   Theme: Osaka Sakura (Light)
+======================================== */
+[data-theme="osaka"] {
+  /* Core Colors */
+  --color-bg: #FDF8F8;
+  --color-bg-secondary: #F8EEF0;
+  --color-bg-tertiary: #F2E4E8;
+  
+  /* Text Colors */
+  --color-text: #3A2B32;
+  --color-text-muted: #7A6570;
+  --color-text-dim: #A8949C;
+  
+  /* Accent Colors */
+  --color-primary: #D4728C;
+  --color-secondary: #8B6B8A;
+  --color-tertiary: #E8B4A0;
+  --color-accent: #D4728C;
+  --color-accent-hover: #C4607A;
+  --color-accent-glow: rgba(212, 114, 140, 0.2);
+  
+  /* UI Colors */
+  --color-border: rgba(58, 43, 50, 0.08);
+  --color-border-hover: rgba(58, 43, 50, 0.15);
+  --color-surface: rgba(58, 43, 50, 0.02);
+  --color-surface-hover: rgba(58, 43, 50, 0.05);
+  
+  /* Gradient */
+  --gradient-bg: linear-gradient(
+    135deg,
+    rgba(212, 114, 140, 0.1) 0%,
+    rgba(139, 107, 138, 0.08) 50%,
+    rgba(232, 180, 160, 0.06) 100%
+  );
+  
+  /* Shape Colors */
+  --shape-1: rgba(212, 114, 140, 0.15);
+  --shape-2: rgba(139, 107, 138, 0.12);
+  --shape-3: rgba(232, 180, 160, 0.1);
+}
+
+/* ========================================
+   Theme: Singapore Garden (Light)
+======================================== */
+[data-theme="singapore"] {
+  /* Core Colors */
+  --color-bg: #F6FAF6;
+  --color-bg-secondary: #E8F2E8;
+  --color-bg-tertiary: #DCE8DC;
+  
+  /* Text Colors */
+  --color-text: #1C2B22;
+  --color-text-muted: #4A6050;
+  --color-text-dim: #8A9A8E;
+  
+  /* Accent Colors */
+  --color-primary: #2D8B5A;
+  --color-secondary: #5C8A6C;
+  --color-tertiary: #D4A853;
+  --color-accent: #2D8B5A;
+  --color-accent-hover: #1E7A4A;
+  --color-accent-glow: rgba(45, 139, 90, 0.2);
+  
+  /* UI Colors */
+  --color-border: rgba(28, 43, 34, 0.08);
+  --color-border-hover: rgba(28, 43, 34, 0.15);
+  --color-surface: rgba(28, 43, 34, 0.02);
+  --color-surface-hover: rgba(28, 43, 34, 0.05);
+  
+  /* Gradient */
+  --gradient-bg: linear-gradient(
+    135deg,
+    rgba(45, 139, 90, 0.08) 0%,
+    rgba(92, 138, 108, 0.06) 50%,
+    rgba(212, 168, 83, 0.05) 100%
+  );
+  
+  /* Shape Colors */
+  --shape-1: rgba(45, 139, 90, 0.12);
+  --shape-2: rgba(92, 138, 108, 0.1);
+  --shape-3: rgba(212, 168, 83, 0.1);
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Stunning Animated Titles | Cole Lee</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Adobe Fonts - Roca -->
+  <link rel="stylesheet" href="https://use.typekit.net/dwh5keb.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="blog.css">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'osaka';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <!-- Cursor follower -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Floating background elements -->
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <!-- Social Icons Header -->
+  <nav class="social-header has-back">
+    <a href="/" class="back-link magnetic" data-strength="20">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      <span>Back</span>
+    </a>
+    <div class="social-icons">
+      <a href="https://x.com/covacut" target="_blank" class="social-icon magnetic" data-strength="30" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/covacut/" target="_blank" class="social-icon magnetic" data-strength="30" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@covacut" target="_blank" class="social-icon magnetic" data-strength="30" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/cole-lee-0564ab70/" target="_blank" class="social-icon magnetic" data-strength="30" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="container blog-container">
+    <!-- Blog Header -->
+    <article class="blog-post">
+      <header class="blog-header" data-animate>
+        <span class="blog-category">Tutorial</span>
+        <h1 class="blog-title">How I Create Animated Titles</h1>
+        <p class="blog-subtitle">My process, tools, and exact prompts</p>
+        <div class="blog-meta">
+          <span class="blog-author">By Cova</span>
+          <span class="blog-divider">·</span>
+          <time class="blog-date" datetime="2025-02-01">February 2025</time>
+        </div>
+      </header>
+
+      <div class="blog-body" data-animate>
+        <p>Hey everyone! I wanted to share a detailed guide on how I create my eye-catching animated titles, including the exact prompts I use :) </p>
+
+        <div class="instagram-embed">
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DUaI0ztjn73/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DUaI0ztjn73/" target="_blank">View this post on Instagram</a>
+          </blockquote>
+        </div>
+
+        <h2>Step 1: Create Your Starting Frame</h2>
+        <p>This image will be a reference to create all the other frames. Feel free to handdraw it, create it with design software, or type it out and take a screenshot.</p>
+        <div class="blog-image">
+          <img src="images/step-1.png" alt="Step 1: Create your starting frame" loading="lazy">
+        </div>
+
+        <h2>Step 2: Generate the Magic Frames</h2>
+        <p>I use <a href="https://www.freepik.com/spaces" target="_blank">Freepik Spaces</a> which allows me to build a visual workflow. In the video, I used the <strong>nanobanana</strong> model, which is excellent for transforming existing images.</p>
+        <p>Upload your image as the first "node", then add an image generator node connected to it. Copy and paste the prompts from the library below to generate your new frames. And don't be afraid to experiment!</p>
+        <div class="blog-image">
+          <img src="images/step-2.png" alt="Step 2: Generate magic frames with AI" loading="lazy">
+        </div>
+
+        <h2>Step 3: Animate Your Title</h2>
+        <p>Once you have a collection of frames you love, it's time to bring them to life.</p>
+        <p>Bring all your generated images into a video editing application (like CapCut, Adobe Premiere Pro, or Final Cut Pro). Place the images one after another on your timeline — I make each image 5 frames.</p>
+        <p>Finally, use the chroma key or "remove background" feature to remove the bright blue or green background. In Premiere, this is called "Color Key".</p>
+        <div class="blog-image">
+          <img src="images/step-3.png" alt="Step 3: Animate your title" loading="lazy">
+        </div>
+      </div>
+
+    <!-- Prompt Library -->
+    <section class="prompt-library">
+      <div class="prompt-library-header" data-animate>
+        <h2 class="section-title">My Prompts</h2>
+        <p class="prompt-note">Here are the exact prompts I used. Click Copy to grab any one!</p>
+      </div>
+
+      <div class="prompts-grid">
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/Lens.gif" alt="Gel Pen Lettering example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">01</span>
+            <h3>Gel Pen Lettering</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into gel-pen lettering. Allow the letter shapes to vary slightly. Use saturated pastel ink with subtle bleed, shine, and pressure variation. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into gel-pen lettering. Allow the letter shapes to vary slightly. Use saturated pastel ink with subtle bleed, shine, and pressure variation. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/Collage.gif" alt="Paper Collage Lettering example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">02</span>
+            <h3>Layered Paper-Collage</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into layered paper-collage lettering. Allow the letter shapes to vary slightly. Use torn paper edges, subtle layering, and soft pastel paper tones. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into layered paper-collage lettering. Allow the letter shapes to vary slightly. Use torn paper edges, subtle layering, and soft pastel paper tones. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/ceramics.gif" alt="Ceramic Lettering example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">03</span>
+            <h3>Ceramic Lettering</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into ceramic lettering. Allow the letter shapes to vary slightly. Use uneven glaze, subtle shine, and handmade surface imperfections in muted natural colors. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into ceramic lettering. Allow the letter shapes to vary slightly. Use uneven glaze, subtle shine, and handmade surface imperfections in muted natural colors. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/Screenprint.gif" alt="Screenprint Lettering example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">04</span>
+            <h3>Rubber-Stamp Lettering</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into rubber-stamp lettering. Allow the letter shapes to vary slightly. Use uneven ink coverage, distressed edges, and subtle pressure variation in muted pastel ink. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into rubber-stamp lettering. Allow the letter shapes to vary slightly. Use uneven ink coverage, distressed edges, and subtle pressure variation in muted pastel ink. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/Felt.gif" alt="Felt Cut-Out Lettering example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">05</span>
+            <h3>Felt Cut-Out Lettering</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into felt cut-out lettering. Allow the letter shapes to vary slightly. Use soft felt textures with fuzzy edges and subtle depth in muted pastel colors. Choose only one colour for the whole thing. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into felt cut-out lettering. Allow the letter shapes to vary slightly. Use soft felt textures with fuzzy edges and subtle depth in muted pastel colors. Choose only one colour for the whole thing. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/embroidery.gif" alt="Stitched Embroidery example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">06</span>
+            <h3>Stitched Embroidery</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into stitched embroidery lettering. Allow the letter shapes to vary slightly. Use visible thread, imperfect stitch spacing, and soft fabric texture in muted pastel colors. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into stitched embroidery lettering. Allow the letter shapes to vary slightly. Use visible thread, imperfect stitch spacing, and soft fabric texture in muted pastel colors. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/Bubbles.gif" alt="Bubble-Like Lettering example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">07</span>
+            <h3>Bubble-Like Lettering</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into bubble-like lettering. Allow the letter shapes to vary slightly. Use translucent forms with iridescent pastel shifts, soft highlights, and delicate edges. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into bubble-like lettering. Allow the letter shapes to vary slightly. Use translucent forms with iridescent pastel shifts, soft highlights, and delicate edges. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/Clouds.gif" alt="Cloud-Like Lettering example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">08</span>
+            <h3>Cloud-Like Lettering</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into cloud-like lettering. Allow the letter shapes to vary slightly. Use soft, airy puffs with gentle shading and pastel tones, keeping forms light and whimsical. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into cloud-like lettering. Allow the letter shapes to vary slightly. Use soft, airy puffs with gentle shading and pastel tones, keeping forms light and whimsical. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="prompt-card" data-animate>
+          <div class="prompt-preview">
+            <img src="gifs/Particles.gif" alt="Particle-Swarm Lettering example" loading="lazy">
+          </div>
+          <div class="prompt-card-header">
+            <span class="prompt-number">09</span>
+            <h3>Particle-Swarm Lettering</h3>
+          </div>
+          <p class="prompt-text">Transform the sketch into particle-swarm lettering. Allow the letter shapes to vary slightly. Use softly glowing pastel particles loosely orbiting into letter shapes, slightly unstable and alive. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.</p>
+          <button class="copy-btn" data-prompt="Transform the sketch into particle-swarm lettering. Allow the letter shapes to vary slightly. Use softly glowing pastel particles loosely orbiting into letter shapes, slightly unstable and alive. Have a bright blue background with no texture (#0006ff). Avoid digital fonts or overly polished effects.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+      <!-- Closing -->
+      <!-- <div class="blog-body blog-closing" data-animate>
+        <p>Thanks for reading! I hope this guide helps you create something amazing.
+          If you found it useful or made something cool with it, I'd love to see it. Tag me or send me a DM!</p>
+      </div> -->
+    </article>
+  </main>
+
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="theme.js"></script>
+  <script src="app.js"></script>
+  <script src="process.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>

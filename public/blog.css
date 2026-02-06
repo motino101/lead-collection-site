@@ -1,0 +1,449 @@
+/* ========================================
+   Blog Page Styles
+   Requires: tokens.css, base.css, home.css (for cursor & bg shapes)
+======================================== */
+
+/* ========================================
+   Blog Layout
+======================================== */
+.blog-container {
+  max-width: 720px;
+}
+
+/* Instagram Embed */
+.instagram-embed {
+  margin: 32px 0 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-embed .instagram-media {
+  margin: 0 !important;
+  max-width: 540px !important;
+  width: 100% !important;
+}
+
+.blog-post {
+  padding-top: 40px;
+}
+
+/* ========================================
+   Blog Header
+======================================== */
+.blog-header {
+  margin-bottom: 48px;
+}
+
+.blog-category {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.blog-title {
+  font-family: var(--font-title);
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.blog-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+}
+
+.blog-author {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.blog-intro {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.9;
+  margin-bottom: 64px;
+}
+
+/* ========================================
+   Blog Body
+======================================== */
+.blog-body {
+  font-family: var(--font-body);
+}
+
+.blog-body p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.blog-body h2 {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
+.blog-body a {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.blog-body strong {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* ========================================
+   Process Steps
+======================================== */
+.detailed-process {
+  margin-bottom: 80px;
+}
+
+.process-step {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 32px;
+  transition: border-color var(--transition-normal);
+}
+
+.process-step:hover {
+  border-color: var(--color-border-hover);
+}
+
+.process-step-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.step-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+}
+
+.process-step h3 {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.process-step > p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+  line-height: 1.9;
+}
+
+.process-step a {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.process-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.process-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.process-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.process-list.numbered {
+  counter-reset: step;
+}
+
+.process-list.numbered li::before {
+  counter-increment: step;
+  content: counter(step) '.';
+  font-weight: 500;
+}
+
+.process-list li strong {
+  color: var(--color-text);
+}
+
+.step-image,
+.blog-image {
+  margin: 32px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.step-image img,
+.blog-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ========================================
+   Prompt Library
+======================================== */
+.prompt-library {
+  margin-bottom: 80px;
+}
+
+.prompt-library-header {
+  margin-bottom: 48px;
+}
+
+.prompt-library-header .section-title {
+  font-family: var(--font-body);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.prompt-note {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.prompts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.prompt-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.prompt-card:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+}
+
+.prompt-preview {
+  width: 100%;
+  background: #0006ff;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.prompt-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.prompt-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 28px 0;
+  margin-bottom: 12px;
+}
+
+.prompt-number {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-text-dim);
+}
+
+.prompt-card h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.prompt-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 0 28px 16px;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  margin: 0 28px 28px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.copy-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.copy-btn:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.copy-btn.copied {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-bg);
+}
+
+/* Copy Toast Notification */
+.copy-toast {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 100px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s var(--ease-out-expo);
+  z-index: 1000;
+  pointer-events: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.copy-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ========================================
+   Thanks Card
+======================================== */
+.blog-footer {
+  margin-top: 80px;
+}
+
+.thanks-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+}
+
+.thanks-card h3 {
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.thanks-card p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto 16px;
+}
+
+.thanks-cta {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: 24px !important;
+}
+
+/* ========================================
+   Responsive
+======================================== */
+@media (max-width: 768px) {
+  .process-step {
+    padding: 28px 24px;
+  }
+  
+  .prompt-card-header {
+    padding: 20px 20px 0;
+  }
+  
+  .prompt-text {
+    font-size: 0.8rem;
+    padding: 14px;
+    margin: 0 20px 16px;
+  }
+  
+  .copy-btn {
+    margin: 0 20px 20px;
+  }
+  
+  .thanks-card {
+    padding: 32px 24px;
+  }
+}
