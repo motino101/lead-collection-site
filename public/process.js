@@ -4,12 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Copy toast
-  const toast = document.createElement('div');
-  toast.className = 'copy-toast';
-  toast.textContent = 'Copied to clipboard!';
-  document.body.appendChild(toast);
-
   // Copy to clipboard
   document.querySelectorAll('.copy-btn').forEach(btn => {
     btn.addEventListener('click', async function(e) {
@@ -32,12 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       btn.classList.add('copied');
       span.textContent = 'Copied!';
-      toast.classList.add('show');
 
       setTimeout(() => {
         btn.classList.remove('copied');
         span.textContent = originalText;
-        toast.classList.remove('show');
       }, 2000);
     });
   });

@@ -237,13 +237,37 @@ body {
    Responsive
 ======================================== */
 @media (max-width: 640px) {
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .intro {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
   .work-item {
     flex-wrap: wrap;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
+    padding: var(--space-xs) 0;
   }
-  
+
+  .work-text {
+    font-size: 0.95rem;
+  }
+
   .date {
     width: 100%;
     padding-left: var(--space-lg);
+    font-size: 0.8rem;
+  }
+
+  .link {
+    font-size: 0.95rem;
   }
 }
