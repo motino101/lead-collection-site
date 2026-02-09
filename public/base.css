@@ -103,15 +103,15 @@ a:hover {
 
 @media (max-width: 768px) {
   .social-header {
-    padding: 16px 20px;
+    padding: 12px 16px;
   }
-  
+
   .social-header.scrolled {
     background: color-mix(in srgb, var(--color-bg) 85%, transparent);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
-    padding: 12px 20px;
+    padding: 10px 16px;
   }
 }
 
@@ -426,7 +426,7 @@ textarea.input {
 ======================================== */
 @media (max-width: 640px) {
   .container {
-    padding: 72px var(--space-md) var(--space-3xl);
+    padding: 56px var(--space-md) var(--space-3xl);
   }
 
   section {
